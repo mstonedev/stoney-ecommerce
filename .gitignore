@@ -1,7 +1,14 @@
+# Secrets
 .env
 .env.local
 .env*.local
+
+# Frontend
 frontend/node_modules/
 frontend/.next/
+
+# Backend
 backend/target/
-.DS_Store
+
+# Docker volumes (stay on your machine)
+postgres_data/
