@@ -1,0 +1,7 @@
+.env
+.env.local
+.env*.local
+frontend/node_modules/
+frontend/.next/
+backend/target/
+.DS_Store

@@ -1,0 +1,49 @@
+{
+  "name": "E-Commerce Dev",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21",
+      "installMaven": true
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+
+  "forwardPorts": [3000, 8080, 5432, 8888],
+  "portsAttributes": {
+    "3000": { "label": "Next.js Frontend" },
+    "8080": { "label": "Spring Boot API" },
+    "5432": { "label": "PostgreSQL" },
+    "8888": { "label": "Adminer (DB GUI)" }
+  },
+
+  "postCreateCommand": "cd frontend && npm install",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vmware.vscode-spring-boot",
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-spring-initializr",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "Prisma.prisma",
+        "cweijan.vscode-database-client2"
+      ],
+      "settings": {
+        "java.jdt.ls.java.home": "/usr/local/lib/jvm/21",
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[java]": {
+          "editor.defaultFormatter": "redhat.java"
+        }
+      }
+    }
+  }
+}
