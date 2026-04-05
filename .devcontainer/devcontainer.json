@@ -2,7 +2,7 @@
   "name": "Stoney E-Commerce Frontend",
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
-  "workspaceFolder": "/workspace/frontend",
+  "workspaceFolder": "/workspace",
 
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
@@ -17,8 +17,6 @@
     "8080": { "label": "Spring Boot API" },
     "8888": { "label": "Adminer DB GUI" }
   },
-
-  "postCreateCommand": "npm install",
 
   "customizations": {
     "vscode": {
