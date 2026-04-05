@@ -12,3 +12,9 @@ backend/target/
 
 # Docker volumes (stay on your machine)
 postgres_data/
+
+# OS
+.DS_Store
+
+# Build artifacts
+**/next-env.d.ts
